@@ -47,4 +47,4 @@ The *plot* function displays the scatterplot of x and y raw data.
 
 The *lines* function displays the LSLR line result.   Note that *lwd=5* widens the line (default *lwd=1*).   The green color is a little easier to see in my opinion.
 
-see lslr_plot.png for an example of this plot.
+see what this plot looks like at plot_zoom_png_ex52.png in this directory.
