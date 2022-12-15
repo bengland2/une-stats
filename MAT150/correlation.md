@@ -30,10 +30,24 @@ There is no effect!   This is why correlation is so useful - it is not affected 
 
 # Determining if correlation exists
 
-Import the attached dataset from Example 5.2 in your textbook page 216 to R Studio.   You can get it from example_05_02.txt in this directory. After importing, you should see 2 columns, x and y.  The textbook shows a scatterplot of this data. Compute correlation using cor.test to get additional information relevant to deciding whether or not a correlation exists or not:
+Import the attached dataset from Example 5.2 in your textbook page 216 to R Studio.   You can get it from ex5_02.txt in this directory. After importing, you should see 2 columns, x and y.    You can generate a scatterplot as follows:
+
+```
+attach(ex5_2)
+plot(x, y)
+```
+
+The *attach()* function allows you to reference the column names in a data frame without specifying the data frame name each time.
+
+The *plot()* function, when given 2 R vectors (number lists), assumes that you want a scatterplot.  The scatterplot looks like this:
+
+![](scatterplot_example_5_02.png)
+
+The y values do appear to move up as X increases, suggesting a positive correlation.  Compute correlation using cor.test to get additional information relevant to deciding whether or not a correlation exists or not:
 
 ```
 > attach(ex5_02)
+> 
 > cor.test(x, y)
 
 	Pearson's product-moment correlation
