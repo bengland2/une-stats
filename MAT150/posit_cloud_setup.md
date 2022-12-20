@@ -16,13 +16,13 @@ You will have to enter an e-mail address, username and password at minimum.   On
 
 Once you gain access to your account, you'll see a screen like this except there aren't any projects in it.   Click on the "New Project" button in the upper right corner, then select "New RStudio Project" from the menu to create a new project:
 
-![](new-rstudio-project.png)
+![](images/new-rstudio-project.png)
 
 then assign it a name by typing in the field next to "Workspace".
 
 You will then see an empty project that looks like this:
 
-![](empty-rstudio-project.png)
+![](images/empty-rstudio-project.png)
 
 
 

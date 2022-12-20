@@ -41,7 +41,7 @@ The *attach()* function allows you to reference the column names in a data frame
 
 The *plot()* function, when given 2 R vectors (number lists), assumes that you want a scatterplot.  The scatterplot looks like this:
 
-![](scatterplot_example_5_02.png)
+![](images/scatterplot_example_5_02.png)
 
 The y values do appear to move up as X increases, suggesting a positive correlation.  Compute correlation using cor.test to get additional information relevant to deciding whether or not a correlation exists or not:
 

@@ -51,6 +51,6 @@ Note that both of these functions require the x "vector" (list of numbers) to be
 
 And then you get:
 
-![](plot_zoom_png_ex52.png "LSLR plot")
+![](images/plot_zoom_png_ex52.png "LSLR plot")
 
 
