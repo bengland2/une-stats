@@ -20,6 +20,6 @@ We can adjust the number of bins in the histogram, using the optional parameter 
 
 And you get a graph that doesn't look so bell-shaped:
 
-![](images/histogram_normal_300_breaks_30.png)
+![](images/histogram_normal_300_bins_30.png)
 
 This just is what happens when the ratio of values to bins gets too low.
