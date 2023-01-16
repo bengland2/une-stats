@@ -4,7 +4,7 @@ To save graphs and plots that you generate in R Cloud Studio, here is the most r
 
 then hit the *Zoom* button in the lower right pane *Plots* tab to get an enlarged version of it in a separate window.  Then right-click (or 2 fingers on mouse pad) on the new window and select "Save as Image..." to save a **.png** file containing the image to your laptop, like this:
 
-![](images/saving-image-as-png.png)
+![](images/saving-graph-to-png.png)
 
 You can then attach this saved image file to your assignment if that is requested.
 
