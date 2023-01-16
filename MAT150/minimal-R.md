@@ -1,18 +1,54 @@
-This section is intended to tell you just enough about the R language to get you through the MAT150 course.   There are many excellent references on R, but often they include far more information than you need to do basic statistical calculations.
+R language is based on values, expressions, variables, vectors and data frames.
 
-For example, [click here for a free R tutorial](https://intro2r.com/)
+# values and data types
 
-Tasks you need to be able to do with R in order to complete MAT150 revolve around data frames, vectors and variables.   
+A value is a single indivisible piece of data, such as the number 5 or the string "hi".   You will encounter these value types:
 
-**Definition:** an R vector is a list of numbers, and each number in the list can be referenced directly using an index.
+* integer - whole number, such as -4
+* floating-point - subset of real numbers representable in a computer, such as 2.57
+* boolean - TRUE or FALSE
+* string - text surrounded by single- or double-quotes, such as "green"
 
-Again, most other languages have an equivalent data type (example: lists in Python).  But R also natively supports arithmetic and other operations directly on vectors, allowing you to avoid writing loops to do the same thing to each number in a vector.
+# vectors
 
-**Definition:**  A *data frame* is a list of named columns.   Each column is an R vector (list of numbers).  It organizes a dataset so that you can easily access it inside of the R interpreter.
+A vector is a sequence (also called list, or array) of values.  Vectors can be constructed with the c() syntax.  For example, to construct a vector of last 5 leap years:
 
-Data frames also exist within other languages, such as Python (example: *pandas* package), but R natively understands them and thus makes them easier to use.
+```
 
-**Definition**: an R *variable* is a named value.  You create a variable by assigning it a value.   For example
+> leap_years = c(2020, 2016, 2012, 2008, 2004)
+> leap_years
+[1] 2020 2016 2012 2008 2004
+
+```
+
+Each value in this vector can be referenced by an index, where the first index is 1.  For example:
+
+```
+
+> leap_years[2]
+[1] 2016
+
+```
+
+To get the length of a vector, for example:
+
+```
+
+length(leap_years):
+
+```
+Again, most other languages have an equivalent data type (example: lists in Python).  But R also natively supports arithmetic and other operations directly on vectors, allowing you to avoid writing loops to do the same thing to each number in a vector.  For example, this expression generates the next 5 leap years in a vector:
+
+```
+
+l> leap_years + 20
+[1] 2040 2036 2032 2028 2024
+
+```
+
+# variables
+
+an R *variable* is a named value.  You create a variable by assigning it a value.   For example
 
 ```
 a = 3
@@ -20,22 +56,63 @@ a = 3
 
 Creates a new variable, *a*, if it does not already exist, and assigns it the value 3.   
 
-Posit Cloud Studio shows you the existing variables and their values in the *Environment* tab in the upper right pane.  It also shows you what data frames exist and allows you to see their contents.   For example, to view a data frame in a tabular format, click on the data frame in the environment pane.   Alternatively, you can type
+Posit Cloud Studio shows you the existing variables and their values in the *Environment* tab in the upper right pane.  
+
+# data frames
+
+It also shows you what data frames exist and allows you to see their contents.   For example, to view a data frame in a tabular format, click on the data frame in the environment pane.   Alternatively, you can type
 
 ```
+
 View(YourFrame)
+
 ```
 
-To do the same thing.
+To do the same thing.  
 
-TBS - links to subsections for each of these tasks
+## to create a data frame
 
+For example: 
 
-* create a data frame
-* reference a data frame column
-* add a column to a data frame
-* filter rows from a data frame
-* load a data frame from a file on your laptop
-* edit a dataset file and create a data frame from it
-* write out a data frame into a file and download it to your laptop
-* save graphs of data to a .png file and save that file on your laptop
+```
+> myframe = data.frame(first_3_pos_ints = c(1,2,3), next_3_pos_ints = c(6,5,4))
+> myframe
+  first_3_pos_ints next_3_pos_ints
+1                1               4
+2                2               5
+3                3               6
+```
+
+The data frame will have two columns named col1 and col2.
+
+## reference a data frame column
+
+You can pull out the vector of values for a particular column using the "$" sign followed by the column name.  For example:
+
+```
+> myframe$first_3_pos_ints
+[1] 1 2 3
+```
+
+## add a column to a data frame
+
+To create a new column in a data frame, simply assign a value to the column as follows:
+
+```
+
+> myframe$another_3_ints = myframe$next_3_pos_ints + 3
+> myframe$another_3_ints
+[1] 7 8 9
+
+```
+## filter rows from a data frame
+
+You can select a subset of the rows in a data frame using a boolean (i.e. true/false) expression and the `subset` function.  Example:
+```
+
+> subset(myframe, myframe$first_3_pos_ints != 1)
+  first_3_pos_ints next_3_pos_ints another_3_ints
+2                2               5              8
+3                3               6              9
+
+```
