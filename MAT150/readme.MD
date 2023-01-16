@@ -19,13 +19,13 @@ click on <https://intro2r.com/> to see a tutorial on the R language, but this is
   * ![common R stats functions you will use](common_R_stats_functions.md)
 
 * graphs for data visualization using base R graphics
-  * raw data plots
+  * ![raw data plots](raw_plots.md)
   * bar chart
   * pie chart
-  * histogram
+  * ![histogram](histogram.md)
   * boxplot
   * scatterplot
-  * axis labels and title
+  * ![axis labels and title](axis_labels_and_title.md)
   * overlaying line on plot
 
 * ![how to construct and graph frequency tables](frequency_tables.md)
