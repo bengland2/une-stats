@@ -18,7 +18,8 @@ Use R Cloud Studio's editor.  Once the file is created in R Cloud Studio, you ca
 ## chromebook or Linux
 On Chromebooks the equivalent would be something like Nano or Gedit?  If your an antiquated Linux geek like me, you could use vi or emacs as well from a terminal window. 
 
-Format
+# Format
+
  A **.csv** file is a simple way of encoding the contents of a table in a text file.   "csv" stands for "comma-separated values", referring to the fact that each row of a table has multiple values which are separated by a comma.   A .csv file consists of 1 row of column headers, followed by an unlimited number of rows of data.  Each column header should be in quotes, and represents the name of the column in an R data frame.   You can use single quotes or double quotes, but never mix quote types within the same .csv file.  For example, here are the first 3 models of motorcars in the R data frame called *mtcars* :
  
 ```
