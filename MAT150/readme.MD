@@ -20,7 +20,7 @@ click on <https://intro2r.com/> to see a tutorial on the R language, but this is
 
 * graphs for data visualization using base R graphics
   * ![raw data plots](raw_plot.md)
-  * ![bar chart](bar_chart.md)
+  * ![bar chart](bar_graph.md)
   * ![pie chart](pie_chart.md)
   * ![histogram](histogram.md)
   * ![boxplot](boxplots.md)
