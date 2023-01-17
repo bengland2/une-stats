@@ -23,10 +23,10 @@ click on <https://intro2r.com/> to see a tutorial on the R language, but this is
   * ![bar chart](bar_chart.md)
   * ![pie chart](pie_chart.md)
   * ![histogram](histogram.md)
-  * boxplot
-  * scatterplot
+  * ![boxplot](boxplots.md)
+  * ![scatterplot](scatterplots.md)
   * ![axis labels and title](axis_labels_and_title.md)
-  * overlaying line on plot
+  * ![line graphs](line_plots.md)
 
 * ![how to construct and graph frequency tables](frequency_tables.md)
 
