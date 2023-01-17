@@ -7,7 +7,7 @@ click on <https://intro2r.com/> to see a tutorial on the R language, but this is
 * ![how to start running Posit Cloud Studio](posit_cloud_setup.md)
 
 * loading and saving data
-  * how to load a data set from a file
+  * ![how to load a data set from a file](import_dataset.md)
   * ![how to generate a data set loadable by R Studio](how_to_generate_dataset.md)
   * ![how to export a data frame](submitting_data_frame.md)
   * ![how to export a graph](saving_graphs_from_R_Studio.md)
