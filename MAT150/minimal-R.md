@@ -60,7 +60,7 @@ Posit Cloud Studio shows you the existing variables and their values in the *Env
 
 # data frames
 
-It also shows you what data frames exist and allows you to see their contents.   For example, to view a data frame in a tabular format, click on the data frame in the environment pane.   Alternatively, you can type
+A data frame is a series of named vectors.   R Studio shows you what data frames exist and allows you to see their contents.   For example, to view a data frame in a tabular format, click on the data frame in the upper right pane's Environment tab.   Alternatively, you can type
 
 ```
 
