@@ -14,7 +14,7 @@ click on <https://intro2r.com/> to see a tutorial on the R language, but this is
 
 * R language
   * ![R data types you will need](minimal-R.md)
-  * R function calls and how to use packages
+  * ![R function calls](function_calls.md)
   * ![numerical precision and accuracy](numerical_precision.md)
   * ![common R stats functions you will use](common_R_stats_functions.md)
 
