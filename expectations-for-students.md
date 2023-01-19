@@ -31,4 +31,3 @@ Before the second day of class, you need to:
 
 * Please do not ask for a withdrawal at the end of the semester - you all usually know well before that whether you will get a satisfactory grade or not.  If you are not sure how you are doing, feel free to ask and I'll be glad to sit down with you and look at how it's going.  Also speak with your advisor if you are unsure what to do and what your intended degree's grade requirements are.
 * All homework and quiz grades turn to zero at the end of the semester if you have not done them - look at Brightspace announcements for details of the exact date.   During the semester, undone homeworks and quizzes and exams are not counted in your "overall grade" -- otherwise everyone would start out with a zero :-{  But unless the title of the homework says "ungraded", then you have to do it.
-* 
