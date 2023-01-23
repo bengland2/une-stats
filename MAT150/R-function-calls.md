@@ -32,7 +32,7 @@ For example, this function generates a histogram of 300 values generated from a 
 ```
 
 hist(rnorm(300), col="green", breaks=20)
-hist(rnorm(300)```
+hist(rnorm(300)
 
 ```
 In this example, the required argument is the vector of values that we want to plot in the histogram, and the optional argument names are "col" and "breaks".   We can leave out the optional arguments, as we do in the 2nd line of code.  But we cannot leave out the vector of values.  For the required argument, we do not have to specify a name.
