@@ -30,7 +30,7 @@ There is no effect!   This is why correlation is so useful - it is not affected 
 
 # Determining if correlation exists
 
-Import the attached dataset from Example 5.2 in your textbook page 216 to R Studio.   You can get it from data_sets/ex5_02.txt. After importing, you should see 2 columns, x and y.    You can generate a scatterplot as follows:
+Import the attached dataset from Example 5.2 in your textbook page 216 to R Studio.   You can get it from [data_sets/ex5_02.txt](https://raw.githubusercontent.com/bengland2/une-stats/main/MAT150/data_sets/ex5_02.txt). After importing, you should see 2 columns, x and y.    You can generate a scatterplot as follows:
 
 ```
 attach(ex5_2)
