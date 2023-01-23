@@ -25,8 +25,8 @@ These parameters are described in documentation:
 * `horiz` - when set to TRUE instead of default of FALSE, it makes the bars horizontal instead of vertical (the default)
 * `las=2` rotates the make and model to be horizontal to go with the horizontal bars
 * `cex.names=0.5` squeezes down the size of the row names so that each fits within the width of a bar - default is 1.0 and you may have to adjust down or up to fit.
-* we add the usual parameters for axis labels, title and color ![described elsewhere](axis_labels_and_title.md)
+* we add the usual parameters for axis labels, title and color [described elsewhere](axis_labels_and_title.md)
 
 The result looks like this:
 
-![](images/california-grapes.png)
+[](images/california-grapes.png)
