@@ -13,5 +13,5 @@ For example, here's a scatterplot done with the built-in mtcars dataset:
 
 And here's what we get:
 
-![](mpg-vs-disp-labels.png)
+![](images/mpg-vs-disp-labels.png)
 
