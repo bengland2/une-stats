@@ -12,3 +12,5 @@ Scatterplots are critical for looking at relationship between parameters of a da
 We put the x-axis values first, the y-axis values second, followed by optional cosmetic parameters.  And you get this:
 
 ![](images/scatterplot_mtcars_mpg_cyl.png)
+
+And we see a negative correlation between cylinders and miles per gallon.
