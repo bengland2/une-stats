@@ -3,6 +3,7 @@ This section describes how to add x-axis labels, Y-axis labels, and titles to yo
 * xlab - stands for X-axis label
 * ylab - stands for Y-axis label
 * main - graph title on top
+* col - color of dots, bars, etc. - can be string like "green"
 
 For example, here's a scatterplot done with the built-in mtcars dataset:
 
