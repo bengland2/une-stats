@@ -21,7 +21,12 @@ The first column of this frequency table is just a row number.  The second colum
 
 ```
 
-barplot(cylcount$n, names.arg=cylcount$cyl, main='car model frequency for cylinder count', xlab='cylinders in engine', ylab='car model count', col="green")
+barplot(cylcount$n, 
+  names.arg=cylcount$cyl, 
+  main='car model frequency for cylinder count', 
+  xlab='cylinders in engine', 
+  ylab='car model count', 
+  col="green")
 
 ```
 
