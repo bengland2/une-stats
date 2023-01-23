@@ -29,4 +29,4 @@ These parameters are described in documentation:
 
 The result looks like this:
 
-[](images/california-grapes.png)
+![](images/california-grapes.png)
