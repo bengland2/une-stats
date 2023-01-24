@@ -3,9 +3,65 @@ You need to have labels for the different bars in the bar chart.   These go in t
 
 To see how to generate bar charts for frequency tables, see [frequency_tables.md](frequency_tables.md)
 
+# example 3.1, comparative bar chart
+
+First we have to load the example data set in the right format to generate the bar graph.  Start with the data frame in example 3.1.   Then we convert it to a matrix format that is understood by the `barplot` function, like this:
+
+```
+
+> ex31df$IdealDistanceName = c('Less than 250 miles', '250 to 500 miles', '500 to 1000 miles', 'more than 1000 miles')
+> data = as.matrix(data.frame(Students=ex31df$Students, Parents=ex31df$Parents))
+> data
+     Students Parents
+[1,]     4450    1594
+[2,]     3942     902
+[3,]     2416     331
+[4,]     1907     180
+
+```
+
+Next we add in the description of each row of data as a row name in the matrix:
+
+```
+
+> rownames(data) = ex31df$IdealDistanceName
+> data
+                     Students Parents
+Less than 250 miles      4450    1594
+250 to 500 miles         3942     902
+500 to 1000 miles        2416     331
+more than 1000 miles     1907     180
+
+```
+Now we are ready to graph it:
+
+```
+
+> barplot(data, 
+    las=2, 
+    cex.names=0.8, 
+    main='Differences in ideal distance for students and parents', 
+    col=rainbow(length(ex31df$Students)), 
+    horiz=TRUE,
+    beside=TRUE)
+> legend("topright", 
+    legend=ex31df$IdealDistanceName, 
+    fill=rainbow(length(ex31df$Students)))
+
+```
+And you get:
+
+![](images/example_3_1_bar_chart.png)
+
+You can also generate a stacked bar chart from the same data by removing `beside=TRUE` optional argument:
+
+![](images/example_3_1_stacked_bar.png)
+
+
+
 # textual bar labels
 
-In order to use textual labels for each bar, we have to use horizontal bars, in order to leave enough space on the left for names or descriptive text.  We must make the bars small enough that there is room for text on the left.   For example, with the dataset from [example 3.6]([data_sets/ex3_6.txt](https://raw.githubusercontent.com/bengland2/une-stats/main/MAT150/data_sets/ex3_6.txt), this can be done with something like:
+In order to use textual labels for each bar, we have to use horizontal bars, in order to leave enough space on the left for names or descriptive text.  We must make the bars small enough that there is room for text on the left.   For example, with the dataset from [example 3.6](https://raw.githubusercontent.com/bengland2/une-stats/main/MAT150/data_sets/ex3_6.txt), this can be done with something like:
 
 ```
 
