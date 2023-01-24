@@ -3,7 +3,7 @@ You need to have labels for the different bars in the bar chart.
 
 # textual bar labels
 
-In order to use textual labels for each bar, we have to use horizontal bars, in order to leave enough space on the left for names or descriptive text.  We must make the bars small enough that there is room for text on the left.   For example, with the dataset from [example 3.6](data_sets/ex3_6.txt), this can be done with something like:
+In order to use textual labels for each bar, we have to use horizontal bars, in order to leave enough space on the left for names or descriptive text.  We must make the bars small enough that there is room for text on the left.   For example, with the dataset from [example 3.6]([data_sets/ex3_6.txt](https://raw.githubusercontent.com/bengland2/une-stats/main/MAT150/data_sets/ex3_6.txt), this can be done with something like:
 
 ```
 
