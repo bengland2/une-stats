@@ -9,6 +9,7 @@ Pay close attention to required and optional function parameter syntax.
 # function list
 
 * **sort(number-list)** - useful for computing percentiles, frequency tables
+* **length(list)** - number of values in the list = "vector"
 * **subset(number-list, true-false-expression)**
 * **sum(number-list)** - adds up all the values in the column
 * **label_percent(accuracy=0.01)(fraction-list)** - turns fraction into text percentage with 2 decimal places
