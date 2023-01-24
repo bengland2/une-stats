@@ -1,5 +1,7 @@
 # How to generate bar charts in R
-You need to have labels for the different bars in the bar chart. 
+You need to have labels for the different bars in the bar chart.   These go in the `names.arg` optional parameter.
+
+To see how to generate bar charts for frequency tables, see [frequency_tables.md](frequency_tables.md)
 
 # textual bar labels
 
