@@ -113,7 +113,7 @@ Next we create a new data frame containing just the data we need for a graph or 
 cum_freq_table = data.frame(RangeUpper=upperlimits, CumFreq=ex0328$CumFreq)
 
 ```
-We can generate a line graph using [instructions here](line_graph.md) .   One technique is to plot the raw relative frequencies and overlay the cumulative frequency as a line on top of it.   To do this:
+We can generate a line graph using [instructions here](line_plots.md) .   One technique is to plot the raw relative frequencies and overlay the cumulative frequency as a line on top of it.   To do this:
 
 ```
 plot(ex3_28$max.commute.time, ex3_28$relfreq, 
