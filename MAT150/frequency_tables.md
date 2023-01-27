@@ -65,7 +65,7 @@ barplot(mpg_tbl$Freq, names.arg=mpg_tbl$Var1)
 ```
 Where we use the *names.arg* optional parameter to display the interval under each bar:
 
-![](images/barplot-diab-age-rngs.png)
+![](images/barplot_mpg_freq.png)
 
 Now consider the attached data set ![ex0328.txt]([data_sets/ex0328.txt](https://raw.githubusercontent.com/bengland2/une-stats/main/MAT150/data_sets/ex0328.txt)), which shows driving commutes broken down into time interval categories.   Load the data set into R Cloud Studio -- you should see 2 columns:
 
