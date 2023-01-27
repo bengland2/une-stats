@@ -67,7 +67,7 @@ Where we use the *names.arg* optional parameter to display the interval under ea
 
 ![](images/barplot_mpg_freq.png)
 
-Now consider the attached data set ![ex0328.txt]([data_sets/ex0328.txt](https://raw.githubusercontent.com/bengland2/une-stats/main/MAT150/data_sets/ex0328.txt)), which shows driving commutes broken down into time interval categories.   Load the data set into R Cloud Studio -- you should see 2 columns:
+Now consider the attached data set [ex0328.txt]([data_sets/ex0328.txt](https://raw.githubusercontent.com/bengland2/une-stats/main/MAT150/data_sets/ex0328.txt)), which shows driving commutes broken down into time interval categories.   Load the data set into R Cloud Studio -- you should see 2 columns:
 
 * Commute.Time - time interval for driving commute time
 * Frequency - how many commute times fit into this interval
@@ -113,7 +113,7 @@ Next we create a new data frame containing just the data we need for a graph or 
 cum_freq_table = data.frame(RangeUpper=upperlimits, CumFreq=ex0328$CumFreq)
 
 ```
-We can generate a line graph using ![instructions here](line_graph.md) .   One technique is to plot the raw relative frequencies and overlay the cumulative frequency as a line on top of it.   To do this:
+We can generate a line graph using [instructions here](line_graph.md) .   One technique is to plot the raw relative frequencies and overlay the cumulative frequency as a line on top of it.   To do this:
 
 ```
 plot(ex3_28$max.commute.time, ex3_28$relfreq, 
