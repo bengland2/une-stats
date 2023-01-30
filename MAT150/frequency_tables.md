@@ -136,3 +136,4 @@ This will result in a graph like:
 
 ![](images/plot_commute_times_cumfreq.png)
 
+In this plot, the relative frequency (dots) is the slope of the cumulative frequency, and the cumulative frequency is the sum of the relative frequencies at or to the left of the current x-coordinate.  In other words, cumulative frequency is like the integral of the relative frequency here.  We will see this more when we discuss probability.
