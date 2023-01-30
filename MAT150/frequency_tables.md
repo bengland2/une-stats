@@ -1,32 +1,38 @@
 We can generate relative frequency tables from any R data frame column where all the sample elements are counted in exactly 1 row.   
-In other words, the column is classifying each sample value into some category and adding it to that category's count.   You install this package to get the count() function:
-
-```
-install.packages("dplyr")
-library(dplyr)
-```
-
+In other words, the column is classifying each sample value into some category and adding it to that category's count.   
 We'll start out using the built-in mtcars data frame.  To generate the raw frequency counts for a column:  
 
 ```
-cylcount = count(mtcars, cyl)
-cylcount
-  cyl  n
-1   4 11
-2   6  7
-3   8 14
-```
 
-The first column of this frequency table is just a row number.  The second column shows the number of cylinders, and the 3rd column shows the number of car models with that number of cylinders in the engine.    To graph this, we can just use:
+> table(mtcars$cyl)
+
+ 4  6  8 
+11  7 14 
 
 ```
 
-barplot(cylcount$n, 
-  names.arg=cylcount$cyl, 
-  main='car model frequency for cylinder count', 
-  xlab='cylinders in engine', 
-  ylab='car model count', 
-  col="green")
+This gives you a frequency table showing how many car models have 4, 6 or 8 cylinders.   But it's in the wrong format - we want it as a data frame.   To get it into that format, we just use the `as.data.frame` function as shown:
+
+```
+
+> as.data.frame(table(mtcars$cyl))
+  Var1 Freq
+1    4   11
+2    6    7
+3    8   14
+
+```
+
+The first column of this frequency table is just a row number.  The second column shows the number of cylinders, and the 3rd column shows the number of car models with that number of cylinders in the engine.    To graph this, we can just save this to a variable and plot it with `barplot` as shown here:
+
+```
+
+> barplot(cylcount$Freq, 
+          names.arg=cylcount$Var1, 
+          main='car model frequency for cylinder count', 
+          xlab='cylinders in engine', 
+          ylab='car model count', 
+          col="green")
 
 ```
 
@@ -35,9 +41,9 @@ and you get something like this:
 ![](images/barplot_cyl_freq.png)
 
 
-# non-default intervals
+# frequency tables using intervals
 
-If your problem requires that you use specific intervals, perhaps non-uniform, then use this method.   In the above example suppose we want to break diabetes patients into groups of 10 years and generate a relative frequency table for that:
+If your problem requires that you compose a frequency table for a numeric variable, then use this method.   In the above example suppose we want to break motor cars into groups based on miles per gallon and generate a relative frequency table for that:
 
 ```
 
