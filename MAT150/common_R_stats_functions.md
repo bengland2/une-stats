@@ -8,6 +8,7 @@ Pay close attention to required and optional function parameter syntax.
 
 # function list
 
+* **c(value1, value2, ... )** - construct a vector (i.e. list) of R values
 * **sort(number-list)** - useful for computing percentiles, frequency tables
 * **length(list)** - number of values in the list = "vector"
 * **subset(number-list, true-false-expression)**
@@ -55,3 +56,9 @@ These functions convert a probability to a continuously distributed random varia
 * **qnorm(prob, mean=0, sd=1, lower.tail=TRUE)** - for normally distributed random variable
 
 * **qt(prob, lower.tail=TRUE)** - for a t-distributed random variable
+
+# generating values from a distrubution
+
+These functions generate a vector of numeric values from a type of distribution
+
+* **rnorm(how_many, mean=0, sd=1)** - for normal distribution
