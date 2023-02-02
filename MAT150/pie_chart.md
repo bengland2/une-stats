@@ -30,3 +30,12 @@ So this table shows that out of all the 32 car models described in the mtcars da
 We use "labels=" to display the numeric value next to the slice of pie.  And we overlay a legend on it to establish what the colors mean. We use the same color scheme that we use for the legend.   And we get:
 
 ![](images/pie-chart.png)
+
+If the legend is not fitting or is overwriting the pie, you can shrink the legend using this statement before the legend() function call:
+
+```
+
+par("cex"=0.7)
+
+```
+This shrinks the font used in the legend.
