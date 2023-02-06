@@ -109,3 +109,4 @@ You can also generate a stacked bar chart from the same data by removing `beside
 
 ![](images/example_3_1_stacked_bar.png)
 
+For additional help with generating barplots, [click on this link](https://r-coder.com/barplot-r/#Grouped_barplot_in_R)
