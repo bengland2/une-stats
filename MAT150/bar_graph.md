@@ -57,7 +57,14 @@ The result looks like this:
 
 # example 3.1, comparative bar chart
 
-First we have to load the example data set in the right format to generate the bar graph.  Start with the data frame in example 3.1.   Then we convert it to a matrix format that is understood by the `barplot` function, like this:
+First we have to load the example data set in the right format to generate the bar graph.  Start with the data frame in example 3.1.   Then we convert it to a matrix format that is understood by the `barplot` function.  So we have to:
+
+- make a new data frame containing the raw frequency counts
+- compute relative frequencies from raw counts
+- include labels for the bars
+- subset the original data frame to contain just the labels and relative frequencies
+- convert it to matrix form that barplot understands
+- insert the labels into matrix as row names
 
 ```
 
@@ -84,7 +91,7 @@ Now the matrix has all the raw data needed to produce the bar graph.
     las=2, 
     cex.names=0.8, 
     main='Differences in ideal distance for students and parents', 
-    col=rainbow(length(ex31df$Students)), 
+    col=rainbow(length(ex31$Students)), 
     horiz=TRUE,
     beside=TRUE)
 > legend("topright", 
