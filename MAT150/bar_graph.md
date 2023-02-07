@@ -83,6 +83,16 @@ greater than 1000 miles 0.1499803 0.05986033
 
 ```
 
+There are a lot of decimal places in the relative frequencies, we don't really want or need that.  To eliminate it, we use the `round` function.   For example, if you just want 2 decimal places:
+
+```
+
+> ex31$Students = round(ex31$StudentCount / sum(ex31$StudentCount), digits=2)
+> ex31$Students
+[1] 0.35 0.31 0.19 0.15
+
+```
+
 Now the matrix has all the raw data needed to produce the bar graph.
 
 ```
