@@ -61,31 +61,22 @@ First we have to load the example data set in the right format to generate the b
 
 ```
 
-> ex31df$IdealDistanceName = c('Less than 250 miles', '250 to 500 miles', '500 to 1000 miles', 'more than 1000 miles')
-> data = as.matrix(data.frame(Students=ex31df$Students, Parents=ex31df$Parents))
+> ex31 = data.frame(StudentCount=c(4450,3942,2416,1907), ParentCount=c(1594, 902, 331, 180))
+> ex31$Students = ex31$StudentCount / sum(ex31$StudentCount)
+> ex31$Parents = ex31$ParentCount / sum(ex31$ParentCount)
+> ex31$IdealDistance = c('Less than 250 miles', '250 to 500 miles', '500 to 1000 miles', 'greater than 1000 miles')
+> data = as.matrix(data.frame(Students=ex31$Students, Parents=ex31$Parents))
+> rownames(data) = ex31$IdealDistance
 > data
-     Students Parents
-[1,]     4450    1594
-[2,]     3942     902
-[3,]     2416     331
-[4,]     1907     180
+                         Students    Parents
+Less than 250 miles     0.3499803 0.53009644
+250 to 500 miles        0.3100275 0.29996674
+500 to 1000 miles       0.1900118 0.11007649
+greater than 1000 miles 0.1499803 0.05986033
 
 ```
 
-Next we add in the description of each row of data as a row name in the matrix:
-
-```
-
-> rownames(data) = ex31df$IdealDistanceName
-> data
-                     Students Parents
-Less than 250 miles      4450    1594
-250 to 500 miles         3942     902
-500 to 1000 miles        2416     331
-more than 1000 miles     1907     180
-
-```
-Now we are ready to graph it:
+Now the matrix has all the raw data needed to produce the bar graph.
 
 ```
 
@@ -97,8 +88,8 @@ Now we are ready to graph it:
     horiz=TRUE,
     beside=TRUE)
 > legend("topright", 
-    legend=ex31df$IdealDistanceName, 
-    fill=rainbow(length(ex31df$Students)))
+    legend=ex31$IdealDistance, 
+    fill=rainbow(length(ex31$Students)))
 
 ```
 And you get:
