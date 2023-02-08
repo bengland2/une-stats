@@ -23,17 +23,24 @@ You only need a tiny subset of R language statistics capabilities for MAT150.  
 
 # trimmed means
 
-Once you've sorted the list, you can do a trimmed mean by taking a slice from the middle of the list using array indexes.  For example:
+Once you've sorted the list, you can do a trimmed mean by taking a slice from the middle of the list using array indexes.  For example, suppose we want to trim approximately 10% off the ends of a list.
 
 ```
-mylist=c(3,0,24,15,7,12,13)
-mysort=sort(mylist)
-mysort [1] 0 3 7 12 13 15 24
-trim = 1
-mytrim = mysort[(1+trim): (length(mysort)-trim)]
-mytrim [1] 3 7 12 13 15
-mean(mytrim) [1] 10
+> mylist=c(3,0,24,15,7,12,13)
+> mysort=sort(mylist)
+> mysort
+[1] 0 3 7 12 13 15 24
+> n = length(mysort)
+> mean(mysort)
+[1] 10.57143
+> trim_indices = n * 10 / 100
+> mytrim = mysort[(trim_indices+1): (n-trim_indices)]
+> mytrim
+[1] 3 7 12 13 15
+mean(mytrim)
+[1] 7
 ```
+as you can see, by removing the extreme values, we get a very different result for the mean.
 
 # functions for analyzing bi-variate data
 
