@@ -40,7 +40,8 @@ Once you've sorted the list, you can do a trimmed mean by taking a slice from th
 mean(mytrim)
 [1] 7
 ```
-as you can see, by removing the extreme values, we get a very different result for the mean.
+as you can see, by removing the extreme values, we get a very different result for the mean.  In the statement that assigns `mytrim`, pay attention to the parentheses - the statement does not work without them!
+
 
 # functions for analyzing bi-variate data
 
