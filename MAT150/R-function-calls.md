@@ -1,5 +1,5 @@
 All of you are going to have to know how to call R functions, such as the statistics functions built into R.   
-You need to understand function inputs, outputs and intended purpose.
+You need to understand function inputs, outputs and intended purpose.  For a more complete introduction, [see this link into R tutorial](https://intro2r.com/using-functions-in-r.html).
 
 # function return value
 
