@@ -1,10 +1,4 @@
-You only need a tiny subset of R language statistics capabilities for MAT150.   Below is a cheat sheet of statistical functions.  In order to make use of this you must understand how to pass parameters to an R library function and how R will pass parameters back to you.   See the R tutorial section on basics at:
-
-https://intro2r.com/using-functions-in-r.html
-
-Pay close attention to required and optional function parameter syntax.  
-* Optional arguments do not have to be passed into the function and have default values, but if you choose to supply them, they must be passed with the syntax name=value.
-* For required arguments, you just pass the value of the argument into the function, and you pass all required arguments in the order that the function expects.
+You only need a tiny subset of R language statistics capabilities for MAT150.   Below is a cheat sheet of statistical functions.  In order to make use of this you must understand how to pass parameters to an R library function and how R will pass parameters back to you.   [Click here to see how to call R functions](R-function-calls.md) .
 
 # functions for constructing vectors and data frames
 
