@@ -6,12 +6,15 @@ Pay close attention to required and optional function parameter syntax.
 * Optional arguments do not have to be passed into the function and have default values, but if you choose to supply them, they must be passed with the syntax name=value.
 * For required arguments, you just pass the value of the argument into the function, and you pass all required arguments in the order that the function expects.
 
-# function list
+# functions for constructing vectors and data frames
 
 * **c(value1, value2, ... )** - construct a vector (i.e. list) of R values
 * **sort(number-list)** - useful for computing percentiles, frequency tables
 * **length(list)** - number of values in the list = "vector"
 * **subset(number-list, true-false-expression)**
+
+# functions for descriptive statistics
+
 * **sum(number-list)** - adds up all the values in the column
 * **label_percent(accuracy=0.01)(fraction-list)** - turns fraction into text percentage with 2 decimal places
 * **count(any-list)** - constructs a frequency table showing how often any particular value occurs in any-list
@@ -19,13 +22,10 @@ Pay close attention to required and optional function parameter syntax.
 * **mean(number-list)** 
 * **sd(number-list)** - standard deviation
 * **var(number-list)** - variance = square of standard deviation
-* **cor(column1, column2)** - compute correlation statistic for 2 variables 
-* **cor.test(column1, column2)** - compute all correlation-related statistics for 2 variables
 * **median(number-list)** 
 * **min(number-list)** - minumum value
 * **max(number-list)** - maximum value
 * **quantile(number-list)** - produces 0th, 25th, 50th, 75th, and 100% values - 0th percentile is really the min, and 100% value is the max
-* **t.test(s1, s2, paired=FALSE, alternative="two-sided", mu=0, conf.level = 0.95)** - see this link for further details.
 
 # trimmed means
 
@@ -40,6 +40,12 @@ mytrim = mysort[(1+trim): (length(mysort)-trim)]
 mytrim [1] 3 7 12 13 15
 mean(mytrim) [1] 10
 ```
+
+# functions for analyzing bi-variate data
+
+* **cor(column1, column2)** - compute correlation statistic for 2 variables 
+* **cor.test(column1, column2)** - compute all correlation-related statistics for 2 variables
+* **lm(y ~ x)** - compute least-squares linear regression (best-fit line)
 
 # converting x-axis values to probabilities
 
