@@ -10,7 +10,7 @@ You only need a tiny subset of R language statistics capabilities for MAT150.  
 # functions for descriptive statistics
 
 * **sum(number-list)** - adds up all the values in the column
-* **label_percent(accuracy=0.01)(fraction-list)** - turns fraction into text percentage with 2 decimal places
+* **label_percent(fraction-list, accuracy=0.01)** - turns fraction into text percentage with 2 decimal places
 * **count(any-list)** - constructs a frequency table showing how often any particular value occurs in any-list
 * **cumsum(freq-column)** - generates cumulative frequency list from a relative frequency list or frequency list
 * **mean(number-list)** 
@@ -19,7 +19,7 @@ You only need a tiny subset of R language statistics capabilities for MAT150.  
 * **median(number-list)** 
 * **min(number-list)** - minumum value
 * **max(number-list)** - maximum value
-* **quantile(number-list)** - produces 0th, 25th, 50th, 75th, and 100% values - 0th percentile is really the min, and 100% value is the max
+* **quantile(number-list, percentile-list)** - produces sequence of percentile values, only the percentile you want is expressed as a fraction not a number between 0 and 100.   Default is c(0, 0.25, 0.50, 0.75, 1.00) for 0th (min), 25th, 50th, 75th, and 100% (max) values.
 
 # trimmed means
 
