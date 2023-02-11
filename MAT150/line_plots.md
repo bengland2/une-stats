@@ -1,4 +1,4 @@
-Line plots can be useful for visualizing cumulative frequency data, cumulative distribution functions or probability distribution functions.   For example, suppose we want to graph the distribution function of the standard normal distribution.  We can generate a set of input values where the normal distribution is significantly greater than zero as follows:
+Line plots can be useful for visualizing time series data, cumulative frequency data, cumulative distribution functions or probability distribution functions.   For example, suppose we want to graph the distribution function of the standard normal distribution.  We can generate a set of input values where the normal distribution is significantly greater than zero as follows:
 
 ```
 > zscores=seq(-3, 3, 0.1)
