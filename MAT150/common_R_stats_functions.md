@@ -20,6 +20,7 @@ You only need a tiny subset of R language statistics capabilities for MAT150.  
 * **min(number-list)** - minumum value
 * **max(number-list)** - maximum value
 * **quantile(number-list, percentile-list)** - produces sequence of percentile values, only the percentile you want is expressed as a fraction not a number between 0 and 100.   Default is c(0, 0.25, 0.50, 0.75, 1.00) for 0th (min), 25th, 50th, 75th, and 100% (max) values.
+* **IQR(number-list)** - computes Inter-quartile range for a sample
 
 # trimmed means
 
