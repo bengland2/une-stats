@@ -24,6 +24,11 @@ and this looks like:
 
 ![](images/barplot-ex32-resumes.png)
 
+# common numeric axis for a set of charts
+
+If you have to compare 2 bar charts, you want to have the same numeric axis, since it is difficult for the user to do this visually. You can do this with the `xlim` (for horizontal bars) or `ylim` (for vertical bars) parameter, which will let you specify a min and max value for the numeric axis.  This is an optional parameter, so if we add `ylim=c(0,100)` to the above example's arguments we will get:
+
+![](images/barplot-ylim-example.png)
 
 # textual bar labels, single set of bar lengths
 
