@@ -1,4 +1,41 @@
-Line plots can be useful for visualizing time series data, cumulative frequency data, cumulative distribution functions or probability distribution functions.   For example, suppose we want to graph the distribution function of the standard normal distribution.  We can generate a set of input values where the normal distribution is significantly greater than zero as follows:
+Line plots can be useful for visualizing time series data, cumulative frequency data, cumulative distribution functions or probability distribution functions.  
+
+# graphing time-series data
+
+Suppose you are Galileo in the 1600s standing on the leaning tower of Pisa.  You drop a metal ball off the top of the tower and measure its progress towards the ground by marking a string every second.  Suppose the time series showing distance in feet from the top of the tower as a function of time is:
+
+```
+
+time_sec = c(0, 1, 2, 3, 4, 5)
+distance_ft = c(0, 5, 15, 30, 50, 75)
+
+```
+and if we want to plot this time series:
+
+```
+
+plot(time_sec, distance_ft, type = 'l', col='red', lwd=3)
+
+```
+
+We get:
+
+![](images/pisa.png)
+
+If you want to see exactly where the data points are, the `type='b'` graph is better:
+
+```
+
+plot(time_sec, distance_ft, type='b', col='red', lwd=3)
+
+```
+Will look like:
+
+![](images/pisa2.png)
+
+# graphing probability distribution function
+
+For example, suppose we want to graph the distribution function of the standard normal distribution.  We can generate a set of input values where the normal distribution is significantly greater than zero as follows:
 
 ```
 > zscores=seq(-3, 3, 0.1)
