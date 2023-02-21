@@ -53,4 +53,5 @@ And then you get:
 
 ![](images/plot_zoom_png_ex52.png "LSLR plot")
 
+For a simple, more intuitive derivation of the LSLR slope, see [this derivation](derivation-of-lslr-slope-simple.pdf) .
 
