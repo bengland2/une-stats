@@ -69,8 +69,8 @@ finally we draw a scatterplot with the data points with LSLR line overlaid:
 
 ```
 
-> plot(y, x, main="ben.2 LSLR", col="red")
-> lines(y_hat, x, col="green", lwd=5)
+> plot(x, y, main="ben.2 LSLR", col="red")
+> lines(x, y_hat, col="green", lwd=5)
 
 ```
 
