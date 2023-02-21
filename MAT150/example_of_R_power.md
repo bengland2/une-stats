@@ -1,3 +1,63 @@
+These examples are with small datasets but it is important to realize that they would work EXACTLY THE SAME WAY with very large datasets, something you could not do with a spreadsheet.
+
+# how R can do mean and standard deviation
+
+It is easy to do the equivalent of mean and standard deviation in R.   Here is a sample x and y:
+
+```
+
+> x=c(-5, 2, 7)
+> y=c(17,7, 2)
+
+```
+To compute mean and std. dev.:
+
+```
+
+> n = length(x1)
+> sum(x1)/n
+[1] 1.333333
+> mean(x1)
+[1] 1.333333
+> x1_minus_mean = x1 - mean(x1)
+> x1_minus_mean_sqr = x1_minus_mean * x1_minus_mean
+> sqrt(sum(x1_minus_mean_sqr)/(n-1))
+[1] 6.027714
+> sd(x1)
+[1] 6.027714
+
+```
+Here it is important that R knows how to multiply 2 vectors together, element by element, to get the vector `x1_minus_mean_sqr`.   
+
+# how R can do correlation
+
+This section shows how powerful R language is for doing routine statistics computations without even using the `cor()` library function provided in R.   Here we do Pearson's correlation formula in the textbook, using just R capabilities for arithmetic on lists of numbers.   First we compute the z-scores for X and Y sample values/
+
+```
+> x=c(-5, 2, 7)
+> y=c(17,7, 2)
+>
+> z_x = (x-mean(x))/sd(x)
+> z_y = (y-mean(y))/sd(y)
+
+```
+Here we are taking advantage of R's ability to multiply a vector by a scalar to get a vector, in this case `z_x` and `z_y` .  Next we evaluate the simpler form of the Pearson correlation formula exploiting z-scores:
+```
+
+> z_x_times_z_y = z_x * z_y
+> r = sum(z_x_times_z_y)/2
+> r
+[1] -0.9955668
+> cor(x1, y1)
+[1] -0.9955668
+
+```
+Notice that no loops are required!  This makes R very fast, even though it is an interpreter, not a compiler.   
+
+And R just figures out what arithmetic to do.  If you multiply a R vector (array/list of numbers) by a scalar (single number), it automatically multiplies each array element by the scalar.  For example, x - mean(x) automatically subtracts the scalar mean(x) from each element of x to make a new vector. 
+
+If you multiply two vectors, it automatically takes each corresponding vector element and multiplies them together to create a new vector (example: z_x * z_y above). In math this is usually called a "dot product". 
+
 # how R can do least-squares linear regression
 
 Normally you will use the R library function `lm()` to do Least-Squares Linear Regression (LSLR).  However, in this example, we show how easy it is to do least-squares linear regression (LSLR) in the R language without even using the built-in function for LSLR, lm().  As you do this, use R studio's upper right pane to monitor the contents of variables to watch the calculation happen.
