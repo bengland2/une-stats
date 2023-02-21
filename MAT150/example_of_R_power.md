@@ -69,12 +69,15 @@ finally we draw a scatterplot with the data points with LSLR line overlaid:
 
 ```
 
-> plot(x, y, main="ben.2 LSLR", col="red")
+> plot(x, y, main="ben.2 LSLR", col="red", xlim=c(0, 10), ylim=c(-10, 50))
 > lines(x, y_hat, col="green", lwd=5)
+> lines(c(0, mean(x)), c(a, mean(y)), y_hat, col='green', lwd=1, type='b' )
 
 ```
-
-and the result should look like:
+We control the X and Y axis limits in the `plot` call so that the Y-intercept of the LSLR can be seen. 
+The first call to `lines()` draws the LSLR line itself.   
+The second call to `lines` connects the LSLR line to the Y-intercept.
+The result should look like:
 
 ![](images/lslr_by_hand.png)
 
