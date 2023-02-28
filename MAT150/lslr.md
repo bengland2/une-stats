@@ -75,5 +75,9 @@ This graph shows relatively small residuals spread randomly through the graph, w
 
 For a quantitative measure of the line fit, you can get the coefficient of determination from the `summary(lmout)` output where it mentions `r^2`, which is the symbol for the coefficient of determination.   This is a number between 0 and 1, with 1 being the best line fit.   We see a value of 0.8385, which means that 83.85% of the variation in y-values can be explained by the line, a good result.
  
- 
+# influential data
+
+To determine if the observation is in fact influential, we assess whether removal of this observation has a large impact on the value of the slope or intercept of the least-squares line.
+
+An observation is an outlier if it has a large residual. Outlier observations fall far away from the least-squares line in the y direction.  See textbook section 5.3 example 5.9 for an example of this.
 
