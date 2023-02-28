@@ -55,3 +55,23 @@ And then you get:
 
 For a simple, more intuitive derivation of the LSLR slope, see [this derivation](derivation-of-lslr-slope-simple.pdf) .
 
+# residuals and coefficient of determination
+
+If you want to visualize and quantify how good your LSLR line fits the data, you need residuals.  Using the `lmout` generated in previous section, you can get residuals from `lmout$residuals`.   Using these you can generate a residual plot showing residual value for each x-value in your sample:
+
+```
+
+plot(x, lmout$residuals,
+ main='residual plot',
+ xlab='x-value',
+ ylab='residual for each x-value')
+ 
+ ```
+ and you get a graph like this:
+ 
+ ![](images/lslr_residual_plot.png)
+ 
+ For a quantitative measure of the line fit, you can get the coefficient of determination from the `summary(lmout)` output where it mentions `r^2`, which is the symbol for the coefficient of determination.   This is a number between 0 and 1, with 1 being the best line fit.   We see a value of 0.8385, which means that 83.85% of the variation in y-values can be explained by the line, a good result.
+ 
+ 
+
