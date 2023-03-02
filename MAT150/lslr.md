@@ -1,4 +1,8 @@
-Here's how to do basic least-squares line fitting to a data set in R, using data from the example 5.6 (also from example 5.2) on textbook page 228, which shows relationship between wine taste and tannin concentration.  The data set is in [data_sets/ex5_02.txt](https://raw.githubusercontent.com/bengland2/une-stats/main/MAT150/data_sets/ex5_02.txt).   The scatterplot there shows that the 2 variables have potential for least-squares linear regression.   To compute a least-squares linear regression line for the data and graph it with the data, upload the file from ex5_02.txt to R Cloud Studio, then import the dataset to obtain data frame *ex5_02*, then:
+Here's how to do basic least-squares line fitting to a data set in R.
+
+For a simple, more intuitive derivation of the LSLR slope, see [this derivation](derivation-of-lslr-slope-simple.pdf) , but you do not need this to generate an LSLR line.
+
+Using data from the example 5.6 (also from example 5.2) on textbook page 228, which shows relationship between wine taste and tannin concentration.  The data set is in [data_sets/ex5_02.txt](https://raw.githubusercontent.com/bengland2/une-stats/main/MAT150/data_sets/ex5_02.txt).   The scatterplot there shows that the 2 variables have potential for least-squares linear regression.   To compute a least-squares linear regression line for the data and graph it with the data, upload the file from ex5_02.txt to R Cloud Studio, then import the dataset to obtain data frame *ex5_02*, then:
 
 ```
 > attach(ex5_02)
@@ -53,7 +57,6 @@ And then you get:
 
 ![](images/plot_zoom_png_ex52.png "LSLR plot")
 
-For a simple, more intuitive derivation of the LSLR slope, see [this derivation](derivation-of-lslr-slope-simple.pdf) .
 
 # residuals and coefficient of determination
 
