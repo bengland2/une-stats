@@ -2,4 +2,4 @@ This PBS Nova half-hour long video really digs into how statistics is used by po
 
 Here's a [link to the program - click here](https://www.pbs.org/video/computers-v-crime-um7cco/)
 
-WARNING: this video may not have sound on Windows 11 laptops, at least not on mine, but [it works fine on any apple or android device according to PBS here](https://www.pbs.org/troubleshooting/).   I did get it to work by clicking on Start -> Settings (gear icon) -> System -> Sound and then I used the troubleshooter, it reinstalled Windows sound drivers and then sound started working.
+WARNING: this video may not have sound on Windows 11 laptops, at least not on mine, but [it works fine on any apple or android device according to PBS here](https://www.pbs.org/troubleshooting/), and it worked right away on my IPhone.  I did get it to work on Windows by clicking on Start -> Settings (gear icon) -> System -> Sound and then I used the troubleshooter, it reinstalled Windows sound drivers and then sound started working.
