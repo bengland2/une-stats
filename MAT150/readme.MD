@@ -36,3 +36,5 @@ click on <https://intro2r.com/> to see a tutorial on the R language, but this is
 * [correlation](correlation.md)
 
 * [Least-Squares Linear Regression (LSLR)](lslr.md)
+
+* [how to calculate parameters of probability distribution in R](prob_dist_parameters.md)
