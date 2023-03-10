@@ -64,4 +64,4 @@ Every probability distribution in R has 4 functions associated with it, and thes
 - **q** - inverse cumulative probability distribution function, can be used to compute percentiles
   - **p** - input probability, function returns the x-value a such that P(x < a) = p
 
-For example, for the normal distribution, all of the 4 function names end with "norm", and begin with the above 4 letters.  So for example, the `pnorm()` function computes the probability P(x < a) for input value a.
+For example, for the normal distribution, all of the 4 function names end with "norm", and begin with the above 4 letters.  So for example, the `pnorm()` function computes the probability P(x < a) for the normal distribution with input value a.
