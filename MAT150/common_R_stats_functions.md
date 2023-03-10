@@ -50,24 +50,17 @@ as you can see, by removing the extreme values, we get a very different result f
 * **cor.test(column1, column2)** - compute all correlation-related statistics for 2 variables
 * **lm(y ~ x)** - compute least-squares linear regression (best-fit line)
 
-# converting x-axis values to probabilities
+# 4 functions for each probability distribution
 
-These functions convert a continuously distributed random variable value to the probability that a value <= to it will occur.  This is also referred to as the "area to the left" in the graphical representation.   If the optional parameter **lower.tail=FALSE** is passed, then we get the area to the right.
+Every probability distribution in R has 4 functions associated with it, and these are named using a prefix letter:
 
-* **pnorm(x, mean=0, sd=1, lower.tail=TRUE)** - for normally distributed random variable
+* **r** - returns a vector of freshly generated random values obeying the probability distribution, required arguments are:
+** **n** - number of values in the returned vector
+* **d** - probability density for any valid x-value of the probability distribution function
+** **x** - input x-value for which you want to get the density
+* **p** - cumulative probability distribution function, returns "area to the left"
+** **a** - input x-value, function returns P(x < a)
+* **q** - inverse cumulative probability distribution function, can be used to compute percentiles
+** **p** - input probability, function returns the x-value a such that P(x < a) = p
 
-* **pt(x, lower.tail=TRUE)** - for a t-distributed random variable
-
-# converting probabilities to x-axis values
-
-These functions convert a probability to a continuously distributed random variable percentile (i.e. the x value such that the area under the curve equals the input probability.  If the default value of lower.tail=TRUE is used, then this is also referred to as the "area to the left" in the graphical representation, but if lower.tail=FALSE is specified, then we get the "area to the right".
-
-* **qnorm(prob, mean=0, sd=1, lower.tail=TRUE)** - for normally distributed random variable
-
-* **qt(prob, lower.tail=TRUE)** - for a t-distributed random variable
-
-# generating values from a distrubution
-
-These functions generate a vector of numeric values from a type of distribution
-
-* **rnorm(how_many, mean=0, sd=1)** - for normal distribution
+For example, for the normal distribution, all of the 4 function names end with "norm", and begin with the above 4 letters.  So for example, the `pnorm()` function computes the probability P(x < a) for input value a.
