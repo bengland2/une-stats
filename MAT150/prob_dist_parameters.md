@@ -1,6 +1,6 @@
 How do you compute the mean, variance and standard deviation of a probability distribution in R?   Standard deviation is just the square root of the variance.   This example will illustrate how R can make such computations easy.
 
-See textbook example 7.7 (with a [data set here](data_sets/exer7_7.csv)) and import this data set into R studio first.
+See textbook example 7.7 (with a [data set here](data_sets/exercise7_7.csv)) and import this data set into R studio first.
 
 "Airlines sometimes overbook flights. Suppose that for a plane with 100 seats, an airline takes 110 reservations. Define the variable x as the number of people who actually show up for a sold-out flight."
 
