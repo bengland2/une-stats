@@ -6,6 +6,7 @@ You only need a tiny subset of R language statistics capabilities for MAT150.  
 * **sort(number-list)** - useful for computing percentiles, frequency tables
 * **length(list)** - number of values in the list = "vector"
 * **subset(number-list, true-false-expression)**
+* **seq(min-value, max-value [, step-size])**- generate sequence of values (default step 1)
 
 # functions for descriptive statistics
 
