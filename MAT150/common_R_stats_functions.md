@@ -54,13 +54,13 @@ as you can see, by removing the extreme values, we get a very different result f
 
 Every probability distribution in R has 4 functions associated with it, and these are named using a prefix letter:
 
-* **r** - returns a vector of freshly generated random values obeying the probability distribution, required arguments are:
-** **n** - number of values in the returned vector
-* **d** - probability density for any valid x-value of the probability distribution function
-** **x** - input x-value for which you want to get the density
-* **p** - cumulative probability distribution function, returns "area to the left"
-** **a** - input x-value, function returns P(x < a)
-* **q** - inverse cumulative probability distribution function, can be used to compute percentiles
-** **p** - input probability, function returns the x-value a such that P(x < a) = p
+- **r** - returns a vector of freshly generated random values obeying the probability distribution, required arguments are:
+  - **n** - number of values in the returned vector
+- **d** - probability density for any valid x-value of the probability distribution function
+  - **x** - input x-value for which you want to get the density
+- **p** - cumulative probability distribution function, returns "area to the left"
+  - **a** - input x-value, function returns P(x < a)
+- **q** - inverse cumulative probability distribution function, can be used to compute percentiles
+  - **p** - input probability, function returns the x-value a such that P(x < a) = p
 
 For example, for the normal distribution, all of the 4 function names end with "norm", and begin with the above 4 letters.  So for example, the `pnorm()` function computes the probability P(x < a) for input value a.
