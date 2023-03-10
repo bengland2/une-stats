@@ -15,10 +15,17 @@ To see if a sample or other vector of values is normally distributed, use the te
 
 egg_weights = c(53.04, 53.50, 52.53, 53.00, 53.07, 52.86, 52.66, 53.23, 53.26, 53.16)
 sorted_egg_weights = sort(egg_weights)
-normal_sample = rnorm(length(egg_weights))
-sorted_normal = sort(normal_sample)
-plot(sorted_egg_weights, sorted_normal)
-cor(sorted_egg_weights, sorted_normal)
+sample_size = length(egg_weights)
+probability_step = 1/(sample_size)
+probability_values = seq(probability_step/2.0, 1, probability_step)
+inv_cdf_values = qnorm(probability_values)
+plot(sorted_egg_weights, inv_cdf_values, 
+     col='darkgreen', 
+     type='b', 
+     main='normality test for egg weights', 
+     ylab='normal dist.', 
+     xlab='sorted egg weights')
+r = cor(sorted_egg_weights, inv_cdf_values)
 
 ```
 If the egg weights are normally distributed, then you should get a plot that is something like this:
