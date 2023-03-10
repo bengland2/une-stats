@@ -30,7 +30,7 @@ r = cor(sorted_egg_weights, inv_cdf_values)
 ```
 If the egg weights are normally distributed, then you should get a plot that is something like this:
 
-![](images/egg_weights_normality)
+![](images/egg_weights_normality.png)
 
 And a correlation that is above the critical value in Table 7.1 for sample size 10, 0.880 (in this case, I got correlation r = 0.941).
 
