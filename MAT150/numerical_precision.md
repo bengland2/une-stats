@@ -18,6 +18,10 @@ When a question asks for a probability, normally you should provide this as a nu
 
 If you are asked to enter a number greater than -1 and less than 1, place a 0 to the left of the decimal point.  This is a little easier to read.  It is equivalent if you write the number without the leading zero, but BrightSpace will not understand that, so we have to pick one format to recognize.  Otherwise it would be necessary to provide both formats as answers for all quiz questions.
 
+# 0 and significant digits
+
+It doesn't make sense to make people write 0 as 0.00 for example - this number has zero significant digits no matter what you do, so just write it as 0.   If the problem asks for a specific number of decimal places, then you should write out zero digits to the right of the decimal point.
+
 # No data entry validation
 
 Unfortunately BrightSpace doesn't know that the answer you are providing is a number.   This may be a flaw in BrightSpace that I brought to CETL's attention, but for now you should be sure that you typed the answer correctly - BrightSpace won't tell you if you didn't.   For example, it doesn't tell you if you put a comma where the period punctuation should be in the number.
