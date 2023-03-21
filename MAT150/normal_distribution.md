@@ -32,6 +32,8 @@ If the egg weights are normally distributed, then you should get a plot that is 
 
 ![](images/egg_weights_normality.png)
 
-And a correlation that is above the critical value in Table 7.1 for sample size 10, 0.880 (in this case, I got correlation r = 0.986).
+And a correlation that is above the critical value in Table 7.1 for sample size 10, 0.880 (in this case, I got correlation r = 0.986).  
+
+For R code to automate generating the `inv_cdf_values` above, see [normality_test.R](normality_test.R)
 
 
