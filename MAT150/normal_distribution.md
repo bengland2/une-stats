@@ -34,6 +34,27 @@ If the egg weights are normally distributed, then you should get a plot that is 
 
 And a correlation that is above the critical value in Table 7.1 for sample size 10, 0.880 (in this case, I got correlation r = 0.986).  
 
-For R code to automate generating the `inv_cdf_values` above, see [normality_test.R](normality_test.R)
+For R code to automate generating the `inv_cdf_values` value above using the `normal_zscores` function, see [normality_test.R](normality_test.R)
 
+Think of this code as generating percentiles.   For example, with the sample size 10 from the example above, we get:
 
+```
+
+> normal_zscores(10)
+ [1] -1.6448536 -1.0364334 -0.6744898 -0.3853205 -0.1256613
+ [6]  0.1256613  0.3853205  0.6744898  1.0364334  1.6448536
+
+```
+To understand where these numbers come from, the first 2 values in the returned vector are:
+
+```
+
+> qnorm(1/(2*10))
+ [1] -1.6448536
+> qnorm(3/(2*10))
+ [1] -1.0364334
+
+```
+The plot of egg weights against these values is shown above.   We can use the `cor` function to calculate the linear correlation as well and use the table of critical values for that to decide if this is a normal distribution or not.
+
+![](images/critical_values.png)
