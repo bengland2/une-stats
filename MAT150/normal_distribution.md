@@ -9,16 +9,13 @@ Additional help is available from R Studio in the "help" tab.
 
 # normality test
 
-To see if a sample or other vector of values is normally distributed, use the technique in textbook section 7.4.   In example 7.17, to generate normal z-scores for a sample of egg weights, use:
+To see if a sample or other vector of values is normally distributed, use the technique in textbook section 7.4.   In example 7.17, to generate normal z-scores for a sample of egg weights, use the R code below for `normal_zscores` .
 
 ```
 
 egg_weights = c(53.04, 53.50, 52.53, 53.00, 53.07, 52.86, 52.66, 53.23, 53.26, 53.16)
 sorted_egg_weights = sort(egg_weights)
-sample_size = length(egg_weights)
-probability_step = 1/(sample_size)
-probability_values = seq(probability_step/2.0, 1, probability_step)
-inv_cdf_values = qnorm(probability_values)
+inv_cdf_values = normal_zscores(length(egg_weights))
 plot(sorted_egg_weights, inv_cdf_values, 
      col='darkgreen', 
      type='b', 
@@ -36,7 +33,16 @@ And a correlation that is above the critical value in Table 7.1 for sample size 
 
 For R code to automate generating the `inv_cdf_values` value above using the `normal_zscores` function, see [normality_test.R](normality_test.R)
 
-Think of this code as generating percentiles.   For example, with the sample size 10 from the example above, we get:
+Go to the bottom of this page and click on the link for the R code that I wrote to implement the method discussed in the slides for normality testing.&nbsp; To get and run the actual code, as opposed to the github webpage for the code:
+
+- click on the raw button
+- download that code to your laptop in the file **normality_test.R**
+- upload to R studio
+- click on the file normality_test.R in R studio files tab to see it in code panel
+- click on "source" button within code panel to load that function into the R interpreter
+- You can now call this function just like any other R function
+
+This code generates a set of percentiles.   For example, with the sample size 10 from the example above, we get:
 
 ```
 
