@@ -31,16 +31,14 @@ If the egg weights are normally distributed, then you should get a plot that is 
 
 And a correlation that is above the critical value in Table 7.1 for sample size 10, 0.880 (in this case, I got correlation r = 0.986).  
 
-For R code to automate generating the `inv_cdf_values` value above using the `normal_zscores` function, see [normality_test.R](normality_test.R)
+For R code to automate generating the `inv_cdf_values` value above using the `normal_zscores` function, see [normality_test.R](normality_test.R) .   To get and run the actual code:
 
-Go to the bottom of this page and click on the link for the R code that I wrote to implement the method discussed in the slides for normality testing.&nbsp; To get and run the actual code, as opposed to the github webpage for the code:
-
-- click on the raw button
-- download that code to your laptop in the file **normality_test.R**
-- upload to R studio
-- click on the file normality_test.R in R studio files tab to see it in code panel
-- click on "source" button within code panel to load that function into the R interpreter
+- Click on the link above for the R code that I wrote to implement the method discussed in the slides for normality testing. 
+- click on the `raw` button, which gets you the actual code text rather than formatting it for display
+- copy-and-paste the 3 lines of code to your console and hit ENTER key
 - You can now call this function just like any other R function
+
+In the real world, [you would probably use a source code control system like git](https://git-scm.com/) to get this code into R, but for such a small amount of software, it's easier to just copy-and-paste it.
 
 This code generates a set of percentiles.   For example, with the sample size 10 from the example above, we get:
 
