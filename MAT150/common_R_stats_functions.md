@@ -10,6 +10,8 @@ You only need a tiny subset of R language statistics capabilities for MAT150.  
 
 # functions for descriptive statistics
 
+* **round(number, digits=0)** - rounds off a floating-point (real) number to specified decimal places (default 0)
+* **signif(number, digits=6)** - rounds off a floating-point number to specified significant digits (default 6)
 * **sum(number-list)** - adds up all the values in the column
 * **label_percent(fraction-list, accuracy=0.01)** - turns fraction into text percentage with 2 decimal places
 * **count(any-list)** - constructs a frequency table showing how often any particular value occurs in any-list
