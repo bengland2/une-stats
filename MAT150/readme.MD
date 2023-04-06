@@ -19,7 +19,8 @@ click on <https://intro2r.com/> to see a tutorial on the R language, but this is
   * [common R stats functions you will use](common_R_stats_functions.md)
   * probability distributions
     * [Normal distribution](normal_distribution.md)  
-    * T-distribution and others as needed
+    * [T-distribution](t_distribution.md)
+    * others as needed
 
 * graphs for data visualization using base R graphics
   * [raw data plots](raw_plot.md)
