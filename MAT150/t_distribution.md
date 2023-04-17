@@ -34,6 +34,8 @@ The optional argument "col" is not required, but is nice eye-candy.  You then ge
 
 ![](images/boxplot_2_sample.png)
 
+# how to do T-test using R
+
 But can we answer the question about whether there is a significant difference between the means of the two populations represented by our two samples?  We can use the t.test function to do this.  We need to identify the alternative hypothesis that we are testing first.  The simplest form of the t-test looks like this:
 
 ```
