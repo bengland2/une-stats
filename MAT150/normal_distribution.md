@@ -9,6 +9,52 @@ lower.tail=FALSE will result in evaluating area under the curve to the right, ra
 
 Additional help is available from R Studio in the "help" tab.
 
+# z-tests for one and two samples
+
+To use this feature, you must install a R-language package called BSDA:
+
+> install.packages('BSDA')
+> library(BSDA)
+
+Now you can look for help on the z.test function in the Help tab in the lower right pane.  The short version is:
+
+`z.test(x1, x2, 
+         alternative='two-sided', 
+         mu=0, 
+         sigma.x=NULL, 
+         sigma.y=NULL, 
+         conf.level=0.95)`
+
+The sigma.x represents standard deviation *of the population from which x1 is randomly selected*, and the sigma y is the standard deviation *of the population from which x2 is randomly selected*.   If you don't know the population standard deviation, you are supposed to use the **t.test** function (described in the [t-distribution](t_distribution.md) page, but you might get away with using an estimate for the population standard deviation.  This function's arguments are very similar to the t.test function arguments, specifically mu, alternative and conf.level).   Note that the conf.level argument expresses it as a number between 0 and 1, not as a percentage.  
+
+So for example, if you want to see if sample a is significantly greater than sample b, with a 90% confidence level, use:
+
+```
+
+> a = rnorm(10, mean=10, sd=1)
+> b = rnorm(8, mean=11, sd=1)
+> ztestout = z.test( a, b, alternative='less', conf.level=0.90)
+Error in z.test(a, b, alternative = "less", conf.level = 0.9) : 
+  You must enter values for both sigma.x and sigma.y
+> ztestout = z.test( a, b, alternative='less', conf.level=0.90, sigma.x=1, sigma.y=1)
+> ztestout
+
+	Two-sample z-Test
+
+data:  a and b
+z = -2.5707, p-value = 0.005075
+alternative hypothesis: true difference in means is less than 0
+90 percent confidence interval:
+         NA -0.3490975
+sample estimates:
+mean of x mean of y 
+ 10.31646  11.01261 
+
+
+```
+
+The results indicate that for these samples, we can reject the null hypothesis (based on p-value) and sample a is from a population that has a greater mean than sample b.   Similarly the confidence interval does not include zero, so this is further evidence that the null hypothesis can be rejected.
+
 # normality test
 
 To see if a sample or other vector of values is normally distributed, use the technique in textbook section 7.4.   In example 7.17, to generate normal z-scores for a sample of egg weights, use the R code below for `normal_zscores` .
