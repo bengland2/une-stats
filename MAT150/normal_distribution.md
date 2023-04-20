@@ -9,9 +9,9 @@ lower.tail=FALSE will result in evaluating area under the curve to the right, ra
 
 Additional help is available from R Studio in the "help" tab.
 
-# z-tests for one and two samples
+# z-tests to compare two samples
 
-To use this feature, you must install a R-language package called BSDA:
+To compare two large samples with respect to proportion, we need a Z-test function.   To use this feature, you must install a R-language package called BSDA:
 
 ```
 
@@ -57,7 +57,7 @@ mean of x mean of y
 
 ```
 
-The results indicate that for these samples, we can reject the null hypothesis (based on p-value) and sample a is from a population that has a greater mean than sample b.   Similarly the confidence interval does not include zero, so this is further evidence that the null hypothesis can be rejected.
+Here we generated the samples using rnorm(), so we know the population standard deviation of 1.  The results indicate that for these samples, we can reject the null hypothesis (based on p-value) and sample a is from a population that has a greater mean than sample b.   Similarly the confidence interval does not include zero, so this is further evidence that the null hypothesis can be rejected.
 
 # normality test
 
