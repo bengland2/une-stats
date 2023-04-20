@@ -57,7 +57,7 @@ mean of x mean of y
 
 ```
 
-Here we generated the samples using rnorm(), so we know the population standard deviation of 1.  The results indicate that for these samples, we can reject the null hypothesis (based on p-value) and sample a is from a population that has a greater mean than sample b.   Similarly the confidence interval does not include zero, so this is further evidence that the null hypothesis can be rejected.
+Here we generated the samples using rnorm(), so we know the population standard deviation of 1.  The results indicate that for these samples, we can reject the null hypothesis (based on p-value) and sample a is from a population that has a greater mean than sample b.   Similarly the confidence interval does not include zero, so this is further evidence that the null hypothesis can be rejected.   For more information, [consult this Statology webpage](https://www.statology.org/one-proportion-z-test-in-r/).
 
 # normality test
 
