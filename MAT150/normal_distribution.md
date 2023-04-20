@@ -13,8 +13,12 @@ Additional help is available from R Studio in the "help" tab.
 
 To use this feature, you must install a R-language package called BSDA:
 
+```
+
 > install.packages('BSDA')
 > library(BSDA)
+
+```
 
 Now you can look for help on the z.test function in the Help tab in the lower right pane.  The short version is:
 
