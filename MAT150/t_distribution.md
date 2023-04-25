@@ -131,5 +131,37 @@ alternative hypothesis: true difference in means is less than 0
 ```
 The hypothesis test results in a p-value of 0.98, much larger than a significance of 0.05 (95% confidence level), which means that we cannot reject the null hypothesis, so there is no evidence to show that the population from which sample x1 is drawn has a mean significantly less than the mean for the population from which sample x2 is drawn.
 
-The confidence interval does include 0, which means we can't rule out that the two samples could be the same.   
+The confidence interval does include 0, which means we can't rule out that the two samples could be the same.  
 
+## T-tests where difference is specified to be non-zero
+
+The optional parameter `mu` allows us to specify a non-zero difference of the two means for the null hypothesis.   If we do not specify `mu`, the default is zero.  For example, suppose we want to test if sample 2 mean exceeds sample 1 mean by > 5.    We can use this call:
+
+```
+
+> t.test(x1, x2, mu=5, alternative='greater')
+
+	Welch Two Sample t-test
+
+data:  x1 and x2
+t = -3.9608, df = 15.985, p-value = 0.9994
+alternative hypothesis: true difference in means is greater than 5
+...
+
+```
+
+Clearly there is no evidence for this claim - the p-value is nearly 1.  But if we change the mu to a lower value instead, we get:
+
+```
+
+ > t.test(x1, x2, mu=-1, alternative='greater')
+
+	Welch Two Sample t-test
+
+data:  x1 and x2
+t = 3.418, df = 15.985, p-value = 0.001764
+alternative hypothesis: true difference in means is greater than -1
+...
+
+```
+And now we see that there is a very low p-value, meaning that the alternative hypothesis is highly likely.   
