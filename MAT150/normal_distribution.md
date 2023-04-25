@@ -9,9 +9,13 @@ lower.tail=FALSE will result in evaluating area under the curve to the right, ra
 
 Additional help is available from R Studio in the "help" tab.
 
-# z-tests to compare two samples
+# comparing two sample proportions
 
-To compare two large samples with respect to proportion, we need a Z-test function.   To use this feature, you must install a R-language package called BSDA:
+To compare two samples with respect to proportion, we use the prop.test function [as described here in this r-bloggers page](https://www.r-bloggers.com/2022/05/two-sample-proportions-test-in-r-complete-guide)
+
+# z-tests to compare two sample means
+
+To compare two samples with respect to mean, we need a Z-test function *if the population proportion is known*.   To use this feature, you must install a R-language package called BSDA:
 
 ```
 
