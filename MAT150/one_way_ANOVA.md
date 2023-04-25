@@ -68,4 +68,31 @@ drugE-drugD    5.58635  1.4850683  9.687632 0.0030633
 ```
 So there were 5 choose 2 = 5!/(3!2!) = 10 possible pairs of values and all but 2 had significant differences.   The two that did not were (2times, 1time) and (4-times, 2-times) and (drugD-4times).    By looking at the boxplot, you can see the overlapping boxes in these cases, so these results seem sane.
 
+But we would like to render the above table as a graph to make it easier to share and explain to other people.  The traditional solution is to wrap plot() around the TukeyHSD call, but this doesn't yield a good graph:
+
+![](images/anova_tukey_plot.png)
+
+However, by using barplot() with some optional arguments, we can do better:
+
+```
+
+tukey_result_df = as.data.frame(tukey_result)
+barplot(tukey_result_df$upr - tukey_result_df$lwr, 
+        cex.names=0.6,
+        col='green', 
+        horiz=TRUE, 
+        las=2, 
+        names.arg=rownames(tukey_result$trt),
+        offset=tukey_result_df$lwr, 
+        main='Tukey factor pair differences' )
+lines(c(0,0),c(0,100), col='red', lwd=3)
+
+```
+
+and now we get:
+
+![](images/anova_tukey_barplot.png)
+
 So that's an example of one-way ANOVA.    THere is much more to understand about ANOVA than what I've covered here but this at least gets the mechanics of running it in R out of the way.
+
+
