@@ -32,7 +32,10 @@ This tells us that there are 5 possible values in the `trt` column, hence degree
 
 ```
 
-boxplot(response ~ trt)
+boxplot(response ~ trt, 
+        col=rainbow(5), 
+        main='effect of factor values on response variable', 
+        xlab='treatment')
 
 ```
 To get this graph:
