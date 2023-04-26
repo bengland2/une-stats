@@ -165,3 +165,54 @@ alternative hypothesis: true difference in means is greater than -1
 
 ```
 And now we see that there is a very low p-value, meaning that the alternative hypothesis is highly likely.   
+
+# paired T-tests
+
+Let's just create a new sample, x3 with the same length as x2, and imagine that the conditions for a paired T-test were met with x2 and x3, and that we expect x3 to be significantly larger than x2.
+
+```
+
+> x3 = rnorm(length(x2), mean=10, sd=2)
+> x3
+[1] 10.647742 10.807093  7.189095  7.150805  8.644117
+[6] 11.237735  6.744535 12.560927
+
+```
+We now can do a paired T-test in 2 ways:
+
+```
+
+> x2_minus_x3 = x2 - x3
+> ttest(x2_minus_x3, alternative='less')
+
+	One Sample t-test
+
+data:  x2_minus_x3
+t = -6.4913, df = 7, p-value = 0.0001684
+alternative hypothesis: true mean is less than 0
+95 percent confidence interval:
+      -Inf -4.014582
+sample estimates:
+mean of x 
+-5.669217 
+
+```
+This confirms that x3 is greater than x2 to almost any confidence level.  Or we could do the same thing with:
+
+```
+
+> t.test(x2, x3, paired=TRUE, alternative='less')
+
+	Paired t-test
+
+data:  x2 and x3
+t = -6.4913, df = 7, p-value = 0.0001684
+alternative hypothesis: true mean difference is less than 0
+95 percent confidence interval:
+      -Inf -4.014582
+sample estimates:
+mean difference 
+      -5.669217 
+
+```
+Note that the p-value and t-statistic are identical.   With paired=TRUE argument, the t.test function does the vector subtraction for you.
